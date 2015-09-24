@@ -38,11 +38,12 @@
 |
 */
 
-$route['sleep'] = "first/zzz";
+$route['sleep'] = "First/zzz";
 $route['lock/(:any)/(:any)'] = "Welcome/shucks";
-$route['show/(:num)'] = "first/gimme/$1";
-$route['dunno'] = "guess";
-$route['^\w{4}/bingo'] = "bingo";
+$route['show/(:num)'] = "First/gimme/$1";
+$route['dunno'] = "Guess";
+$route['^\w{4}/bingo'] = "Bingo";
+$route['comp\d+/(:any)'] = "Bingo/wisdom";
 
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';

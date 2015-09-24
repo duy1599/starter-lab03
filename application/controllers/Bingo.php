@@ -24,6 +24,13 @@ class Bingo extends Application {
 		$this->data = array_merge($this->data, $source);
 		$this->render();
     }
+	
+	function wisdom() {
+		$this->data['pagebody'] = 'justone'; 
+		$source = $this->quotes->get(6);
+		$this->data = array_merge($this->data, $source);
+		$this->render();
+	}
 }
 
 /* End of file Welcome.php */
