@@ -25,6 +25,7 @@ class Bingo extends Application {
 		$this->render();
     }
 	
+	// Directs user to the sixth author and renders that pages elements
 	function wisdom() {
 		$this->data['pagebody'] = 'justone'; 
 		$source = $this->quotes->get(6);

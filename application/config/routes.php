@@ -38,13 +38,20 @@
 |
 */
 
+//Routes to sleep
 $route['sleep'] = "First/zzz";
+//Routes to lock using wild cards
 $route['lock/(:any)/(:any)'] = "Welcome/shucks";
+//Routes to show using Regular Expressions
 $route['show/(:num)'] = "First/gimme/$1";
+//Routes to dunno 
 $route['dunno'] = "Guess";
+//Routes to 4 characters + /bingo using Regular Expressions
 $route['^\w{4}/bingo'] = "Bingo";
+//Routes to comp + numbers using Reguar Expressions
 $route['comp\d+/(:any)'] = "Bingo/wisdom";
 
+//Routes to welcome if no controller is specified
 $route['default_controller'] = "welcome";
 $route['404_override'] = '';
 

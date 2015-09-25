@@ -22,16 +22,12 @@ class First extends Application {
         $this->data['pagebody'] = 'justone';    // this is the view we want shown
         // build the list of authors, to pass on to our view
         $source = $this->quotes->first();
-		/*
-        $this->data['who'] = $source['who'];
-		$this->data['mug'] = $source['mug'];
-		$this->data['what'] = $source['what'];
-		*/
 		$this->data = array_merge($this->data, $source);
 
         $this->render();
     }
 	
+	// Directs user to the first author and renders that pages elements
 	function zzz() {
 		$this->data['pagebody'] = 'justone'; 
 		$source = $this->quotes->get(1);
@@ -39,6 +35,7 @@ class First extends Application {
 		$this->render();
 	}
 	
+	// Directs user to the third author and renders that pages elements
 	function gimme($n) {
 		$this->data['pagebody'] = 'justone'; 
 		$source = $this->quotes->get($n);
